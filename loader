@@ -1,0 +1,25 @@
+from sklearn.datasets import load_files
+''' folder should be like this 
+
+data/
+    train/
+        cat1/
+            a.txt
+            b.txt
+        cat2/
+            c.txt
+            d.txt
+    test/
+        cat1/
+            a.txt
+            b.txt
+        cat2/
+            a.txt
+            b.txt
+
+'''
+def load_data(path):
+    train = load_files(path+r'\train')
+    test = load_files(path+r'\test')
+    return train,test
+
